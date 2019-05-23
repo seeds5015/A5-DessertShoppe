@@ -8,20 +8,50 @@
  *
  * @author CHANGE_THIS_TO_YOUR_NAME
  */
-public class Sundae{
+public class Sundae extends IceCream{
     
 
+   private String icName;
+   private int icCost;
+   
+    private String toppingName;
+    private int toppingCost;
     
     public Sundae(String icName, int icCost, String toppingName, int toppingCost)
     {
+    super(icCost,icName);
+   
+      this.icCost = icCost;
+      this.icName = icName;
+      
+       this.toppingCost = toppingCost;
+       this.toppingName = toppingName;
        
+       
+    }public String getToppingName(){
+        return this.toppingName;
+    }public int getToppingCost(){
+        return this.toppingCost;
+        
+    }public String getIcName(){
+        return this.icName;
+        
+    }public int getIceCost(){
+        return this.icCost;
     }
     
 
     
     public String toString()
     {
-        
+       String output = ("Sundae \n");
+        output = output + super.toString();
+        return output;  
+    }
+
+    @Override
+    public int getCost() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
